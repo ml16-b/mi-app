@@ -10,6 +10,8 @@ import Cronometro from './components/Cronometro';
 import Carrito from './components/Carrito';
 import UserList from './components/UserList';
 import FormularioNombre from './components/FormularioNombre';
+import FormularioRegistro from './components/FormularioRegistro';
+import FormularioCompleto from './components/FormularioCompleto';
 
 
 function App() {
@@ -47,6 +49,8 @@ function App() {
       <UserList></UserList>
 
       <FormularioNombre></FormularioNombre>
+      <FormularioRegistro></FormularioRegistro>
+      <FormularioCompleto></FormularioCompleto>
 
     </div>
   )
