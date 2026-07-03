@@ -3,7 +3,7 @@ import viteLogo from './assets/vite.svg';
 import heroImg from './assets/hero.png';
 import Saludo from './components/Saludo';
 import Producto from './components/Producto';
-import Boton from './components/Boton';
+import Boton from './components/Boton/Boton';
 import Card from './components/Card';
 import Layout from './components/Layout';
 import Cronometro from './components/Cronometro';
