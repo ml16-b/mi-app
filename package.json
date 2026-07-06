@@ -34,5 +34,8 @@
   "bugs": {
     "url": "https://github.com/ml16-b/mi-app/issues"
   },
-  "homepage": "https://github.com/ml16-b/mi-app#readme"
+  "homepage": "https://github.com/ml16-b/mi-app#readme",
+  "dependencies": {
+    "zustand": "^5.0.14"
+  }
 }
