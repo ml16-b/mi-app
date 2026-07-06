@@ -12,15 +12,19 @@ import UserList from './components/UserList';
 import FormularioNombre from './components/FormularioNombre';
 import FormularioRegistro from './components/FormularioRegistro';
 import FormularioCompleto from './components/FormularioCompleto';
+import { ThemeProvider } from './context/ThemeContext';
+import ThemeButton from './components/ThemeButton';
 
 
 function App() {
   return (
     <div className="App">
-
-      <Layout sidebar={<Saludo />}
-        content={<Saludo nombre="Carlos" />}
-        footer={<p>Texto footer layout</p>} />
+      <ThemeProvider>
+        <Layout sidebar={<Saludo />}
+          content={<Saludo nombre="Carlos" />}
+          footer={<p>Texto footer layout</p>} />
+          <ThemeButton></ThemeButton>
+      </ThemeProvider>
 
       <h1>Mi app</h1>
 
