@@ -25,7 +25,7 @@ import BuscarUser from './components/BuscarUser';
 
 import Navbar from './components/Navbar';
 
-const Home = () => <h1>Página de Inicio 🏠</h1>;
+import Home from './pages/Home';
 const About = () => <h1>Sobre Nosotros 👥</h1>;
 const Contacto = () => <h1>Contacto 📧</h1>;
 

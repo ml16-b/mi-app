@@ -19,8 +19,8 @@ export default function UserListZustand() {
     }
 
     return (
-        <div>
-            <h2>Perfil de usuario</h2>
+        <div className="py-8 px-5">
+            <h2 className="font-theme text-lg font-medium">Perfil de usuario</h2>
             <p>ID: {user.id}</p>
             <p>Nombre: {user.firstName}</p>
             <p>Email: {user.email}</p>
