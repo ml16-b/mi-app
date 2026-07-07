@@ -1,4 +1,10 @@
 import { useState } from 'react';
+import { Routes, Route, NavLink } from 'react-router';
+
+import { clsx } from "clsx";
+import { twMerge } from "tailwind-merge";
+
+
 import viteLogo from './assets/vite.svg';
 import heroImg from './assets/hero.png';
 import Saludo from './components/Saludo';
@@ -17,9 +23,40 @@ import ThemeButton from './components/ThemeButton';
 import UserListZustand from './components/UserListZustand';
 import BuscarUser from './components/BuscarUser';
 
+import Navbar from './components/Navbar';
+
+const Home = () => <h1>Página de Inicio 🏠</h1>;
+const About = () => <h1>Sobre Nosotros 👥</h1>;
+const Contacto = () => <h1>Contacto 📧</h1>;
+
 function App() {
+
+  const getLinkClass = ({ isActive }) =>
+    isActive ? "font-bold text-blue-500" : "text-gray-500";
+
   return (
     <div className="App">
+
+      <header className="p-4 border-b">
+        <nav className="flex gap-4">
+          <NavLink to="/" className={getLinkClass}>Inicio</NavLink>
+          <NavLink to="/about" className={getLinkClass}>About</NavLink>
+        </nav>
+      </header>
+
+
+      {/* Zona de contenido cambiante */}
+      <main className="p-4">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contacto" element={<Contacto />} />
+          <Route path="*" element={<h1>404 - Página no encontrada 😱</h1>} />
+
+        </Routes>
+      </main>
+
+      {/*
       <ThemeProvider>
         <Layout sidebar={<Saludo />}
           content={<Saludo nombre="Carlos" />}
@@ -59,7 +96,7 @@ function App() {
       <div>
         <BuscarUser></BuscarUser>
         <UserListZustand></UserListZustand>
-      </div>
+      </div>*/}
     </div>
   )
 }
