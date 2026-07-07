@@ -36,6 +36,7 @@
   },
   "homepage": "https://github.com/ml16-b/mi-app#readme",
   "dependencies": {
+    "react-router": "^8.1.0",
     "zustand": "^5.0.14"
   }
 }

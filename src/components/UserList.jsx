@@ -8,7 +8,7 @@ export default function UserList() {
 
     return (
         <ul>
-            {data?.users?.map(user => <li key={user.id}>{user.firstName} {user.lastName}</li>)}
+            {data?.users?.map(user => <li key={user.id}>{user.firstName} {user.lastName} {user.id}</li>)}
         </ul>
     );
 }

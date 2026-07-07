@@ -14,7 +14,8 @@ import FormularioRegistro from './components/FormularioRegistro';
 import FormularioCompleto from './components/FormularioCompleto';
 import { ThemeProvider } from './context/ThemeContext';
 import ThemeButton from './components/ThemeButton';
-
+import UserListZustand from './components/UserListZustand';
+import BuscarUser from './components/BuscarUser';
 
 function App() {
   return (
@@ -23,7 +24,7 @@ function App() {
         <Layout sidebar={<Saludo />}
           content={<Saludo nombre="Carlos" />}
           footer={<p>Texto footer layout</p>} />
-          <ThemeButton></ThemeButton>
+        <ThemeButton></ThemeButton>
       </ThemeProvider>
 
       <h1>Mi app</h1>
@@ -55,9 +56,12 @@ function App() {
       <FormularioNombre></FormularioNombre>
       <FormularioRegistro></FormularioRegistro>
       <FormularioCompleto></FormularioCompleto>
-
+      <div>
+        <BuscarUser></BuscarUser>
+        <UserListZustand></UserListZustand>
+      </div>
     </div>
   )
 }
 
-export default App
+export default App;
